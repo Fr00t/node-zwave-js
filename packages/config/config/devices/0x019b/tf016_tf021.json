@@ -221,6 +221,56 @@
 			"minValue": 50,
 			"maxValue": 400,
 			"defaultValue": 210
+		},
+		{
+			"#": "14",
+			"$if": "firmwareVersion >= 1.9",
+			"label": "Room sensor calibration",
+			"description": "Range -40 - 40 (-4.0°C 4.0°C)",
+			"valueSize": 1,
+			"minValue": -40,
+			"maxValue": 40,
+			"defaultValue": 0
+		},
+		{
+			"#": "15",
+			"$if": "firmwareVersion >= 1.9",
+			"label": "Floor sensor calibration",
+			"description": "Range -40 - 40 (-4.0°C 4.0°C)",
+			"valueSize": 1,
+			"minValue": -40,
+			"maxValue": 40,
+			"defaultValue": 0
+		},
+		{
+			"#": "16",
+			"$if": "firmwareVersion >= 1.9",
+			"label": "External sensor calibration",
+			"description": "Range -40 - 40 (-4.0°C 4.0°C)",
+			"valueSize": 1,
+			"minValue": -40,
+			"maxValue": 40,
+			"defaultValue": 0
+		},
+		{
+			"#": "17",
+			"$if": "firmwareVersion >= 1.9",
+			"label": "Temperature report interval",
+			"description": "Time interval between consecutive temperature reports. Temperature reports can be also sent as a result of polling. (0: Reporting of temperature disabled, 1-8640 Multiply with 10 seconds, 10 seconds – 24 hours. Default is 6 (60 seconds).)",
+			"valueSize": 2,
+			"minValue": 0,
+			"maxValue": 8640,
+			"defaultValue": 6
+		},
+		{
+			"#": "18",
+			"$if": "firmwareVersion >= 1.9",
+			"label": "Temperature report hysteresis",
+			"description": "The temperature report will be sent if there is a difference in temperature value from the previous value reported, defined in this parameter (hysteresis). Temperature reports can be also sent as a result of polling. (0.1°C – 10.0°C. Default is 10 (1.0°C).)",
+			"valueSize": 1,
+			"minValue": 1,
+			"maxValue": 100,
+			"defaultValue": 10
 		}
 	],
 	"compat": {
